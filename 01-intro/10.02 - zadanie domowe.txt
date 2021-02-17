@@ -1,0 +1,16 @@
+Zadanie domowe 10.02
+
+●	Zainstalowanie Gita i założenie konta na Githubie (lub innej platformie)
+●	Stworzenie repozytorium dla materiałów kursowych
+
+Struktura repozytorium np.
+
+📂 python-course
+ ┣ 📂 01-intro
+ ┣ 📂 02-...
+ ┗ 📂 03-...
+
+Dodatkowo:
+●	Podstawy pracy z wierszem poleceń Windows: np. youtube.com/watch?v=gohuR6-wT0Y
+●	Linux / Mac: podstawowe komendy 
+●	Zadania w folderze zadania_dodatkowe_typy_zmienne
