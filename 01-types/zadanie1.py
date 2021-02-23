@@ -7,4 +7,4 @@ distans = 120
 price_of_gas = 5.04
 price_of_trip = mileage_per_100 * distans/100 * price_of_gas
 
-print(f"koszt_wyprawy to {round(price_of_trip,2)}")
+print(f"koszt wyprawy to {round(price_of_trip,2)}")
