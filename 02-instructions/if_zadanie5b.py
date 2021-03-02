@@ -1,6 +1,7 @@
 password = input('Podaj hasło: ')
 
-lenght_correct = password >= 8
+password_len = len(password)
+lenght_correct = password_len >= 8
 includes_letters_and_digits = not password.isdigit() and not password.isalpha() and password.isalnum()
 at_list_one_capital_letter = not password.islower()
 
