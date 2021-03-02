@@ -1,3 +1,5 @@
+# Rozwiązanie Rity
+
 password = input('Podaj hasło: ')
 
 password_len = len(password)
