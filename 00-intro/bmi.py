@@ -1,5 +1,5 @@
-"obliczenie BMI"
-"BMI = (masa (kg)) / (wzrost (m))²"
+# Stwórz plik bmi.py i napisz program, który obliczy BMI:
+# BMI = (masa (kg)) / (wzrost (m))²
 
 masa = 64
 wzrost = 1.68
