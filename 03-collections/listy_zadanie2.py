@@ -7,6 +7,6 @@ user_input = user_input.split(',')
 
 print('Wśród podanych liczb następujące są liczbami nieparzystymi: ')
 
-for liczba in user_input:
-    if int(liczba) % 2 != 0:
-        print(liczba, end=', ')
+for number in user_input:
+    if int(number) % 2 != 0:
+        print(number, end=', ')

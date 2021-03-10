@@ -10,6 +10,6 @@ for i in range(10):
 
 print('Wśród podanych liczb następujące liczby są liczbami nieparzystymi: ')
 
-for liczba in user_list:
-    if int(liczba) % 2 != 0:
-        print(liczba, end=', ')
+for number in user_list:
+    if int(number) % 2 != 0:
+        print(number, end=', ')
