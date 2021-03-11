@@ -4,6 +4,8 @@
 # Połącz dane w jeden ciąg book za pomocą spacji
 # Policz liczbę wszystkich znaków w napisie book
 
+# ******* rozwiązanie zadania wymaga jeszcze podszlifowania *********
+
 print('Podaj proszę następujące informacje o książkach: ')
 
 book_title = input('Podaj proszę tytuł książki: ')
