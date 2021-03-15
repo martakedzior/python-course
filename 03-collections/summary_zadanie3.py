@@ -5,7 +5,6 @@ n = int(input('Give me number of row and columns N='))
 
 tab = [['-'] * n ] * n
 
-
 print(tab)
 
 for row in tab:
