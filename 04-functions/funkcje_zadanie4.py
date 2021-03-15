@@ -2,7 +2,7 @@
 
 
 def check_if_even_number():
-    counter = int(input('Ile liczb chcesz podać?'))
+    counter = int(input('Ile liczb chcesz podać? '))
 
     user_list_of_numbers = []
 
@@ -14,7 +14,7 @@ def check_if_even_number():
 
     for number in user_list_of_numbers:
         if number % 2 == 0:
-            print(number, end=', ')
+            print(number, end=', ')  #a jak usunąć ten ostatni przecinek??
 
 
 check_if_even_number()
