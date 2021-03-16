@@ -20,6 +20,7 @@ while counter > 0:
 
     if computer_pick == user_guess:
         print(f'Zgadłeś. Komputer wylosował: {computer_pick}!')
+        break
     elif abs(computer_pick - user_guess) > 20:
         print(f'Bardzo zimno! ')
     elif abs(computer_pick - user_guess) > 10:
