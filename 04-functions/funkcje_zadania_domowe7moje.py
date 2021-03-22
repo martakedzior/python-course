@@ -21,7 +21,6 @@ def user_input():
 
 def check_if_credit_card(user_entered_card_nr):
     if len(user_entered_card_nr) not in [13, 15, 16]:
-
         return False
     else:
         return True
