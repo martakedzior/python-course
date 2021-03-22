@@ -3,10 +3,11 @@
 # Co wiemy o tych numerach tych kart?
 #
 #     All Visa card numbers start with a 4. New cards have 16 digits. Old cards have 13.
-#
 #     MasterCard numbers either start with the numbers 51 through 55 or with the numbers 2221 through 2720. All have 16 digits.
-#
 #     American Express card numbers start with 34 or 37 and have 15 digits.
+#
+#    Solution by Rita
+
 
 def can_be_card_number(user_input):
     if not len(user_input) in [13, 15, 16]:
@@ -33,7 +34,6 @@ def is_mastercard(card_number):
 
 
 def is_american_express(card_number):
-
     if card_number[0:2] in ['34', '37'] and len(card_number) == 15:
         return True
     else:
