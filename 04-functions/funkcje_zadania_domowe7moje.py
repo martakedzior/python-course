@@ -16,10 +16,15 @@ def user_input():
     while user_entered_card_nr.isdigit() is not True:
         user_entered_card_nr = input('Please enter card number - use digits only: ').replace(' ', '')
 
-    if len(user_entered_card_nr) not in [13, 15, 16]:
-        print('It is not a card number.')
-
     return user_entered_card_nr
+
+
+def check_if_credit_card(user_entered_card_nr):
+    if len(user_entered_card_nr) not in [13, 15, 16]:
+
+        return False
+    else:
+        return True
 
 
 def check_if_Visa(user_entered_card_nr):
@@ -45,16 +50,17 @@ def check_if_American_Express(user_entered_card_nr):
 
 def card_check():
     card_number = user_input()
-
-    if check_if_Visa(card_number):
-        print('This is Visa Card!')
-    elif check_if_MasterCard(card_number):
-        print('This is Master Card! ')
-    elif check_if_American_Express(card_number):
-        print('This is American Express! ')
+    if check_if_credit_card(card_number):
+        if check_if_Visa(card_number):
+            print('This is Visa Card!')
+        elif check_if_MasterCard(card_number):
+            print('This is Master Card! ')
+        elif check_if_American_Express(card_number):
+            print('This is American Express! ')
+        else:
+            print('This is some other credit card! ')
     else:
-        print('This is some other credit card! ')
-
+        print('It is not a valid card number.')
 
 card_check()
 
