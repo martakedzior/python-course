@@ -42,6 +42,7 @@ def check_if_American_Express(user_entered_card_nr):
     else:
         return False
 
+
 def card_check():
     card_number = user_input()
 
