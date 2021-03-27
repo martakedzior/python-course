@@ -1,5 +1,5 @@
 def read_from(file):
-    with open(file) as fp:
+    with open(file, 'r', encoding='utf-8') as fp:
         content = fp.read()
     return content
 

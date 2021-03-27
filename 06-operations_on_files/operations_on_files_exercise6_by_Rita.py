@@ -1,14 +1,3 @@
-# 7▹ Napisz program, który na podstawie numeru karty odpowie czy ma doczynienia z Visą, MasterCard, a może AmericanExpress.
-#
-# Co wiemy o tych numerach tych kart?
-#
-#     All Visa card numbers start with a 4. New cards have 16 digits. Old cards have 13.
-#     MasterCard numbers either start with the numbers 51 through 55 or with the numbers 2221 through 2720. All have 16 digits.
-#     American Express card numbers start with 34 or 37 and have 15 digits.
-#
-#    Solution by Rita
-
-
 def can_be_card_number(user_input):
     if not len(user_input) in [13, 15, 16]:
         return False
@@ -27,6 +16,7 @@ def is_visa(card_number):
 
 
 def is_mastercard(card_number):
+    # numbers 51 through 55 or with the numbers 2221 through 2720. All have 16 digits.
     if (51 <= int(card_number[0:2]) <= 55 or 2221 <= int(card_number[0:4]) <= 2720) and len(card_number) == 16:
         return True
     else:
@@ -40,17 +30,34 @@ def is_american_express(card_number):
         return False
 
 
-# main_code
-user_input = input('Give me card number: ').replace(" ","")
+def read_cards_number(filename) -> list:
+    with open(filename) as fp:
+        content = fp.readlines()
+    return content
 
-if can_be_card_number(user_input):
-    if is_visa(user_input):
-        print('Visa!')
-    elif is_mastercard(user_input):
-        print('MasterCard')
-    elif is_american_express(user_input):
-        print('American Express')
+
+def save_cards_number(filename, card_number):
+    with open(filename, 'a') as fp:
+        fp.write(card_number + '\n')
+
+# main code
+
+cards_list = read_cards_number('cards.txt')
+
+for card in cards_list:
+    card = card.replace(' ', '').strip()
+    if can_be_card_number(card):
+        if is_visa(card):
+            print('Visa card')
+            save_cards_number('visa.txt', card)
+        elif is_mastercard(card):
+            print('MasterCard')
+            save_cards_number('mastercard.txt', card)
+        elif is_american_express(card):
+            print('American Express')
+            save_cards_number('americaexpress.txt', card)
+        else:
+            print('Inna karta')
+            save_cards_number('other.txt', card)
     else:
-        print('Something else!')
-else:
-    print('This input is not a card number!')
+        print('This input is not a card number')
