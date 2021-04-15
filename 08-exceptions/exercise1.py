@@ -7,7 +7,7 @@ def division(elements):
             result = 10 / element
 
         except ZeroDivisionError as err:
-            print("Dont divide by zero! ", err)
+            print("Don't divide by zero! ", err)
 
         except TypeError as err:
             print("This is not a number! ", err)
