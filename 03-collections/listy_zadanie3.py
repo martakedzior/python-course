@@ -8,3 +8,4 @@ if user_input[0] == user_input[-1]:
     print("takie same")
 else:
     print("nie takie same")
+
