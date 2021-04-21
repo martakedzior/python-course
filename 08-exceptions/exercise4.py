@@ -11,6 +11,16 @@ def user_input():
     return user_input
 
 
+def save_file(filename, content):
+    try:
+        with open(filename, 'x', encoding='UTF-8') as file:
+            file.write(content)
+    except FileExistsError:
+        return 'not saved, file already exist'
+
+    return 'file successfully saved'
+
+
 def input_validation(user_input):
     number_list = []
 
@@ -18,9 +28,10 @@ def input_validation(user_input):
         try:
             item = int(item)
             number_list.append(item)
-        except (ValueError, TypeError):
+        except (ValueError, TypeError) as err:
             item = 0
             number_list.append(item)
+            save_file("error.txt", err)
 
     return number_list
 
