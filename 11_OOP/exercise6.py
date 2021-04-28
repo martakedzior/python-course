@@ -1,0 +1,2 @@
+#6▹ Utworz klasę Kraj, która zawiera informację o powierzchni. ludności, jaki język jest urzędowy, jakie miasto jest stolicą.
+# Utwórz klika obiektów klasy Kraj, stwórz listę obiektów klasy kraj, wyświetl elementy na liście krajów.
