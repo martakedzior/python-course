@@ -1,8 +1,6 @@
 # 2▹ Utwórz klasę dla storczyków. Storczyki z zasady mają różne kolory, pory kwitnienia, gatunki.
 # Utwórz dowolne atrybuty i metody. Dodaj atrybut wspólny dla wszystkich storczyków - królestwo roślin.
-#
 # Utwórz kilka storczyków z różnymi parametrami.
-
 
 class Orchid():
     def __init__(self, kingdom, colour, season, breed):

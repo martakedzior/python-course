@@ -25,7 +25,7 @@ class Queue:
 
 
 if __name__ == "__main__":
-    queue_list = ["one element", "second element"]
+    queue_list = ["one element", "second element", "third element"]
     queue1 = Queue(queue_list)
     queue1.show()
 
