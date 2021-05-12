@@ -1,23 +1,26 @@
 class Rycerz:
     def __init__(self):
-        self.zycie = 60
-        self.doswiadczenie = 0
+        self._zycie = 60
+        self._doswiadczenie = 0
 
     def __repr__(self):
-        return print("Rycerz: hp={}, exp={}".format(self.zycie, self.doswiadczenie))
+        return f"Rycerz: hp={self._zycie}, exp={self._doswiadczenie}"
 
     def maszeruj(self, dystans):
-        self.doswiadczenie = self.doswiadczenie + dystans * 0.2
-        return print("Rycerz: Przeszedłem {} m".format(dystans))
+        print("Rycerz: Przeszedłem {} m".format(dystans))
+        self._doswiadczenie = self._doswiadczenie + dystans * 0.2
 
     def atakuj(self):
-        self.doswiadczenie = self.doswiadczenie + 0.3
-        return print("Rycerz: Machnąłem mieczem!")
+        print("Rycerz: Machnąłem mieczem!")
+        self._doswiadczenie += 0.3
 
 
-
-if __name__ == "__main__":
+def main():
     zagloba = Rycerz()
     zagloba.maszeruj(5)
     zagloba.atakuj()
-    zagloba.__repr__()
+    print(zagloba)
+
+
+if __name__ == "__main__":
+    main()
